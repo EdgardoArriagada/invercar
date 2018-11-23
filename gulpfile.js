@@ -132,9 +132,9 @@ gulp.task('index', function() {
   .pipe(gulp.dest('dist'))
 })
 
-gulp.task('build', ['clean', 'css', 'js', 'img', 'index', 'vendor'], function () {})
+gulp.task('build', gulpSequence('clean', ['css', 'js', 'img', 'vendor', 'index']))
 
-gulp.task('dev', gulpSequence('clean', ['css', 'js', 'img', 'vendor'], 'watch'))
+gulp.task('dev', gulpSequence('build', 'watch'))
 
 // Dev task
 gulp.task('watch', ['browserSync'], function () {
