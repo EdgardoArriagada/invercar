@@ -1,28 +1,30 @@
 {
-  "name": "agency",
-  "title": "Agency",
-  "version": "3.3.7+1",
-  "homepage": "http://startbootstrap.com/template-overviews/agency",
-  "author": "Start Bootstrap",
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE"
+  "name": "invercar",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "edgardoArriagada",
+  "repository": "https://github.com/EdgardoArriagada/invercar",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "5.3.1",
+    "bootstrap": "^3.0.0",
+    "jquery": "3.3.1",
+    "jquery.easing": "^1.4.1"
   },
   "devDependencies": {
-    "bootstrap": "^3.3.7",
-    "browser-sync": "^2.13.0",
-    "font-awesome": "^4.6.3",
+    "browser-sync": "2.24.7",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^2.0.10",
-    "gulp-header": "^1.8.7",
-    "gulp-less": "^3.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2",
-    "gulp-uglify": "^1.5.4",
-    "jquery": "^1.11.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/BlackrockDigital/startbootstrap-agency.git"
+    "gulp-autoprefixer": "6.0.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-clean-css": "3.10.0",
+    "gulp-header": "2.0.5",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-rename": "1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "4.0.1",
+    "gulp-sequence": "^1.0.0",
+    "gulp-uglify": "3.0.1",
+    "popper.js": "^1.14.3",
+    "thunks": "^4.9.3"
   }
 }
