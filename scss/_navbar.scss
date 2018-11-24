@@ -61,28 +61,3 @@
         }
     }
 }
-
-
-@media(min-width:768px) {
-    .navbar-custom {
-        background-color: transparent;
-        padding: 25px 0;
-        transition: padding 0.3s;
-        border: none;
-        .navbar-brand {
-            font-size: 2em;
-            transition: all 0.3s;
-        }
-        .navbar-nav>.active>a {
-            border-radius: 3px;
-        }
-    }
-    // Navbar Change on Scroll
-    .navbar-custom.affix {
-      background-color: $gray-darker;
-      padding: 0.5em 0;
-      .navbar-brand {
-        font-size: 1.5em;
-      }
-    }
-}
