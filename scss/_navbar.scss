@@ -34,10 +34,14 @@
                 font-weight: 400;
                 letter-spacing: 1px;
                 color: $theme-primary;
-                &:hover,
+                &:hover {
+                  color: white;
+                }
                 &:focus {
                     color: $theme-primary;
                     outline: none;
+                    border-bottom: 0.1em solid $gray-light;
+                    margin-bottom: -0.1em; // fix for extra size added by border
                 }
             }
         }
@@ -46,10 +50,14 @@
         border-radius: 0;
         color: white;
         background-color: $gray-darker;
-        &:hover,
+        &:hover {
+          color: white;
+          background-color: $gray-darker;
+        }
         &:focus {
           color: white;
           background-color: $gray-darker;
+          border: none;
         }
     }
 }
@@ -69,16 +77,12 @@
             border-radius: 3px;
         }
     }
-}
-
-// Navbar Change on Scroll
-
-@media(min-width:768px) {
+    // Navbar Change on Scroll
     .navbar-custom.affix {
-        background-color: $gray-darker;
-        padding: 0.5em 0;
-        .navbar-brand {
-            font-size: 1.5em;
-        }
+      background-color: $gray-darker;
+      padding: 0.5em 0;
+      .navbar-brand {
+        font-size: 1.5em;
+      }
     }
 }
