@@ -1,0 +1,88 @@
+// Custom Navigation Bar
+
+.navbar-custom {
+    background-color: $gray-darker;
+    border-color: transparent;
+    .navbar-brand {
+        color: $theme-primary;
+        @include script-font;
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+          color: darken($theme-primary, 15%);
+        }
+    }
+    .navbar-collapse {
+        border-color: fade-out(white, .02);
+    }
+    .navbar-toggle {
+        background-color: $theme-primary;
+        border-color: $theme-primary;
+        @include heading-font;
+        color: white;
+        font-size: 12px;
+        &:hover,
+        &:focus {
+            background-color: $theme-primary;
+        }
+    }
+    .nav {
+        li {
+            a {
+                @include heading-font;
+                font-weight: 400;
+                letter-spacing: 1px;
+                color: $theme-primary;
+                &:hover {
+                  color: white;
+                }
+                &:focus {
+                  z-index: 2; // fix border not showind correctly
+                  color: $theme-primary;
+                  outline: none;
+                  margin: -0.15em;
+                  border: 0.15em solid royalblue;
+                }
+            }
+        }
+    }
+    .navbar-nav>.active>a {
+        border-radius: 0;
+        color: white;
+        background-color: $gray-darker;
+        &:hover {
+          color: white;
+          background-color: $gray-darker;
+        }
+        &:focus {
+          color: white;
+          background-color: $gray-darker;
+        }
+    }
+}
+
+
+@media(min-width:768px) {
+    .navbar-custom {
+        background-color: transparent;
+        padding: 25px 0;
+        transition: padding 0.3s;
+        border: none;
+        .navbar-brand {
+            font-size: 2em;
+            transition: all 0.3s;
+        }
+        .navbar-nav>.active>a {
+            border-radius: 3px;
+        }
+    }
+    // Navbar Change on Scroll
+    .navbar-custom.affix {
+      background-color: $gray-darker;
+      padding: 0.5em 0;
+      .navbar-brand {
+        font-size: 1.5em;
+      }
+    }
+}

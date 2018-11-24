@@ -1,5 +1,6 @@
 @import "variables.scss";
 @import "mixins.scss";
+@import "navbar.scss";
 
 // Global Components
 
@@ -76,94 +77,6 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 3px;
     font-size: 18px;
     padding: 20px 40px;
-}
-
-// Custom Navigation Bar
-
-.navbar-custom {
-    background-color: $gray-darker;
-    border-color: transparent;
-    .navbar-brand {
-        color: $theme-primary;
-        @include script-font;
-        &:hover,
-        &:focus,
-        &:active,
-        &.active {
-            color: darken($theme-primary, 10%);
-        }
-    }
-    .navbar-collapse {
-        border-color: fade-out(white, .02);
-    }
-    .navbar-toggle {
-        background-color: $theme-primary;
-        border-color: $theme-primary;
-        @include heading-font;
-        color: white;
-        font-size: 12px;
-        &:hover,
-        &:focus {
-            background-color: $theme-primary;
-        }
-    }
-    .nav {
-        li {
-            a {
-                @include heading-font;
-                font-weight: 400;
-                letter-spacing: 1px;
-                color: white;
-                &:hover,
-                &:focus {
-                    color: $theme-primary;
-                    outline: none;
-                }
-            }
-        }
-    }
-    .navbar-nav>.active>a {
-        border-radius: 0;
-        color: white;
-        background-color: $theme-primary;
-    }
-    .navbar-nav>.active>a:hover,
-    .navbar-nav>.active>a:focus {
-        color: white;
-        background-color: darken($theme-primary, 10%);
-    }
-}
-
-@media(min-width:768px) {
-    .navbar-custom {
-        background-color: transparent;
-        padding: 25px 0;
-        -webkit-transition: padding 0.3s;
-        -moz-transition: padding 0.3s;
-        transition: padding 0.3s;
-        border: none;
-        .navbar-brand {
-            font-size: 2em;
-            -webkit-transition: all 0.3s;
-            -moz-transition: all 0.3s;
-            transition: all 0.3s;
-        }
-        .navbar-nav>.active>a {
-            border-radius: 3px;
-        }
-    }
-}
-
-// Navbar Change on Scroll
-
-@media(min-width:768px) {
-    .navbar-custom.affix {
-        background-color: $gray-darker;
-        padding: 10px 0;
-        .navbar-brand {
-            font-size: 1.5em;
-        }
-    }
 }
 
 header {
@@ -288,8 +201,8 @@ section {
                     h4 {
                         margin: 0;
                     }
-                }                
-            }            
+                }
+            }
         }
         .portfolio-caption {
             max-width: 400px;
@@ -574,7 +487,7 @@ section#contact {
        font-weight: 700;
        color: $gray-lighter;
     }
-    :-ms-input-placeholder {  
+    :-ms-input-placeholder {
        @include heading-font;
        font-weight: 700;
        color: $gray-lighter;
@@ -704,8 +617,8 @@ ul.social-buttons {
                 -webkit-transform: rotate(90deg);
                 /* Safari and Chrome */
                 z-index:1052;
-            }            
-        }        
+            }
+        }
     }
     .modal-backdrop {
         opacity: 0;

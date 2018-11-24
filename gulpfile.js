@@ -50,7 +50,7 @@ gulp.task('vendor', function() {
 
 // Compile SCSS
 gulp.task('css:compile', function() {
-  return gulp.src('./scss/**/*.scss')
+  return gulp.src('./scss/main.scss')
     .pipe(sass.sync({
       outputStyle: 'expanded'
     }).on('error', sass.logError))
@@ -132,9 +132,9 @@ gulp.task('index', function() {
   .pipe(gulp.dest('dist'))
 })
 
-gulp.task('build', ['clean', 'css', 'js', 'img', 'index', 'vendor'], function () {})
+gulp.task('build', gulpSequence('clean', ['css', 'js', 'img', 'vendor', 'index']))
 
-gulp.task('dev', gulpSequence('clean', ['css', 'js', 'img', 'vendor'], 'watch'))
+gulp.task('dev', gulpSequence('build', 'watch'))
 
 // Dev task
 gulp.task('watch', ['browserSync'], function () {
