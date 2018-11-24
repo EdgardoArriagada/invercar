@@ -13,9 +13,6 @@ var del = require('del');
 var gulpSequence = require('gulp-sequence');
 var replace = require('gulp-replace');
 
-// Set the banner content
-var banner = ''
-
 // Copy third party libraries from /node_modules into /vendor
 gulp.task('vendor', function() {
 
@@ -58,9 +55,6 @@ gulp.task('css:compile', function() {
       browsers: ['last 3 versions'],
       cascade: false
     }))
-    .pipe(header(banner, {
-      pkg: pkg
-    }))
     .pipe(gulp.dest('./css'))
 });
 
@@ -90,9 +84,6 @@ gulp.task('js:minify', function() {
     .pipe(uglify())
     .pipe(rename({
       suffix: '.min'
-    }))
-    .pipe(header(banner, {
-      pkg: pkg
     }))
     .pipe(gulp.dest('./dist/static/js'))
     .pipe(browserSync.stream());
