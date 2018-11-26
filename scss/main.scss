@@ -92,7 +92,7 @@ header {
         padding-bottom: 50px;
         .intro-lead-in {
             @include serif-font;
-            font-style: italic;
+            // font-style: italic;
             font-size: 22px;
             line-height: 22px;
             margin-bottom: 25px;
@@ -445,7 +445,6 @@ aside.clients {
 
 section#contact {
     background-color: $gray-darker;
-    background-image: url('../img/map-image.png');
     background-position: center;
     background-repeat: no-repeat;
     .section-heading {
