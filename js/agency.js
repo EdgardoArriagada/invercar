@@ -23,4 +23,7 @@
             $('.navbar-toggle:visible').click();
     });
 
+    //Update copyright
+    $('.copyright .current-year').text((new Date()).getFullYear());
+
 })(jQuery); // End of use strict
