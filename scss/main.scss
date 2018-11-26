@@ -2,6 +2,7 @@
 @import "mixins.scss";
 @import "navbar.scss";
 @import "timeline.scss";
+@import "team.scss"
 
 // Global Components
 
@@ -157,33 +158,6 @@ section {
 .service-heading {
     margin: 15px 0;
     text-transform: none;
-}
-
-// Team Section
-
-.team-member {
-    text-align: center;
-    margin-bottom: 50px;
-    img {
-        margin: 0 auto;
-        border: 7px solid white;
-    }
-    h4 {
-        margin-top: 25px;
-        margin-bottom: 0;
-        text-transform: none;
-    }
-    p {
-        margin-top: 0;
-    }
-}
-
-// Clients Aside
-
-aside.clients {
-    img {
-        margin: 50px auto;
-    }
 }
 
 // Contact Section
