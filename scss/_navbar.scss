@@ -18,14 +18,14 @@
     }
     .navbar-toggle {
         background-color: $gray-darker;
-        border-color: $theme-primary;
+        border: none;
         @include heading-font;
         color: white;
-        font-size: 12px;
-        padding: 0.6em 1.5em;
+        font-size: 1.2em;
+        padding: 0.4em 0.8em;
         &:hover,
         &:focus {
-            background-color: $gray-dark;
+            background-color: $gray;
         }
     }
     .nav {
