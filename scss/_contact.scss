@@ -1,7 +1,7 @@
 
 // Contact Section
 
-section#contact {
+#contact {
     background-color: $gray-darker;
     background-position: center;
     background-repeat: no-repeat;
@@ -28,22 +28,22 @@ section#contact {
     ::-webkit-input-placeholder {
        @include heading-font;
        font-weight: 700;
-       color: $gray-lighter;
+       color: $gray-light;
     }
     :-moz-placeholder { /* Firefox 18- */
        @include heading-font;
        font-weight: 700;
-       color: $gray-lighter;
+       color: $gray-light;
     }
     ::-moz-placeholder {  /* Firefox 19+ */
        @include heading-font;
        font-weight: 700;
-       color: $gray-lighter;
+       color: $gray-light;
     }
     :-ms-input-placeholder {
        @include heading-font;
        font-weight: 700;
-       color: $gray-lighter;
+       color: $gray-light;
     }
     .text-danger {
         color: $theme-danger;
