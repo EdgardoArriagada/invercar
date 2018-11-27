@@ -5,8 +5,6 @@
     background-color: $gray-darker;
     background-position: center;
     color: $gray-light;
-    overflow: hidden;
-    text-overflow: ellipsis;
     .section-heading {
         color: white;
     }
@@ -52,5 +50,18 @@
     }
     .contact-info {
       margin-bottom: 5em;
+    }
+    .contact-info > h3 {
+      max-width: 18em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #contact {
+        .contact-info > h3 {
+          font-size: 1.3em;
+        }
     }
 }
