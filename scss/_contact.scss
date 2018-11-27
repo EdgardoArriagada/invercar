@@ -8,6 +8,7 @@
     .section-heading {
         color: white;
     }
+    color: $gray-light;
     .form-group {
         margin-bottom: 25px;
         input,
@@ -47,5 +48,8 @@
     }
     .text-danger {
         color: $theme-danger;
+    }
+    .contact-info {
+      margin-bottom: 5em;
     }
 }
