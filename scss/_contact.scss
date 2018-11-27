@@ -4,11 +4,12 @@
 #contact {
     background-color: $gray-darker;
     background-position: center;
-    background-repeat: no-repeat;
+    color: $gray-light;
+    overflow: hidden;
+    text-overflow: ellipsis;
     .section-heading {
         color: white;
     }
-    color: $gray-light;
     .form-group {
         margin-bottom: 25px;
         input,
