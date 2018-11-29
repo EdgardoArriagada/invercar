@@ -23,11 +23,7 @@
             $('.navbar-toggle:visible').click();
     });
 
-    // Offset for Main Navigation
-    $('#mainNav').affix({
-        offset: {
-            top: 1
-        }
-    })
+    //Update copyright
+    $('.copyright .current-year').text((new Date()).getFullYear());
 
 })(jQuery); // End of use strict

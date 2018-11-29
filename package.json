@@ -5,7 +5,7 @@
   "author": "edgardoArriagada",
   "repository": "https://github.com/EdgardoArriagada/invercar",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "5.3.1",
+    "@fortawesome/fontawesome-free": "5.4.0",
     "bootstrap": "^3.0.0",
     "jquery": "3.3.1",
     "jquery.easing": "^1.4.1"

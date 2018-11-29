@@ -17,14 +17,15 @@
         border-color: fade-out(white, .02);
     }
     .navbar-toggle {
-        background-color: $theme-primary;
-        border-color: $theme-primary;
+        background-color: $gray-darker;
+        border: none;
         @include heading-font;
         color: white;
-        font-size: 12px;
+        font-size: 1.2em;
+        padding: 0.4em 0.8em;
         &:hover,
         &:focus {
-            background-color: $theme-primary;
+            background-color: $gray;
         }
     }
     .nav {
@@ -59,30 +60,5 @@
           color: white;
           background-color: $gray-darker;
         }
-    }
-}
-
-
-@media(min-width:768px) {
-    .navbar-custom {
-        background-color: transparent;
-        padding: 25px 0;
-        transition: padding 0.3s;
-        border: none;
-        .navbar-brand {
-            font-size: 2em;
-            transition: all 0.3s;
-        }
-        .navbar-nav>.active>a {
-            border-radius: 3px;
-        }
-    }
-    // Navbar Change on Scroll
-    .navbar-custom.affix {
-      background-color: $gray-darker;
-      padding: 0.5em 0;
-      .navbar-brand {
-        font-size: 1.5em;
-      }
     }
 }
