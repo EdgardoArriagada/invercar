@@ -3,10 +3,14 @@
 
 // Portfolio Section
 
-#portfolio {
+#references {
     .portfolio-item {
-        margin: 0 0 15px;
-        right: 0;
+        transform: scale(0.9);
+        background-color: white;
+        border-radius: 1em;
+        overflow: hidden;
+        padding: 0.8em;
+        box-shadow: $papper-like-shadow;
         .portfolio-link {
             display: block;
             position: relative;
@@ -19,8 +23,6 @@
                 height: 100%;
                 opacity: 0;
                 transition: all ease 0.5s;
-                -webkit-transition: all ease 0.5s;
-                -moz-transition: all ease 0.5s;
                 &:hover {
                     opacity: 1;
                 }
@@ -66,10 +68,10 @@
     }
 }
 
-@media(min-width:767px) {
-    #portfolio {
+@media(max-width:767px) {
+    #references {
         .portfolio-item {
-            margin: 0 0 30px;
+            padding-top: 2em;
         }
     }
 }

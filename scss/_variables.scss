@@ -11,3 +11,5 @@ $gray-dark:			lighten($gray-base, 20%) !default;   // #333
 $gray:				lighten($gray-base, 33.5%) !default; // #555
 $gray-light:		lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:		lighten($gray-base, 93.5%) !default; // #eee
+
+$papper-like-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
