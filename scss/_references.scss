@@ -5,7 +5,7 @@
 
 #references {
     .portfolio-item {
-        transform: scale(0.9);
+        transform: scale(0.95);
         background-color: white;
         border-radius: 1em;
         overflow: hidden;
@@ -76,18 +76,21 @@
     }
 }
 
-// Modals
+// Modal
 
 .portfolio-modal {
     .modal-dialog{
-        margin: 0;
         height: 100%;
         width: auto;
     }
+
+    .modal-body {
+        background-color: white;
+        border-radius: 1em;
+    }
     .modal-content {
-        border-radius: 0;
+        background-color: transparent;
         background-clip: border-box;
-        -webkit-box-shadow: none;
         box-shadow: none;
         border: none;
         min-height: 100%;
@@ -114,41 +117,14 @@
             margin-bottom: 30px;
         }
     }
-    .close-modal {
+    .close {
         position: absolute;
-        width:75px;
-        height:75px;
-        background-color:transparent;
-        top: 25px;
-        right: 25px;
-        cursor: pointer;
-        &:hover {
-            opacity: 0.3;
-        }
-        .lr {
-            height:75px;
-            width:1px;
-            margin-left:35px;
-            background-color:$gray-darker;
-            transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            /* IE 9 */
-            -webkit-transform: rotate(45deg);
-            /* Safari and Chrome */
-            z-index:1051;
-            .rl {
-                height:75px;
-                width:1px;
-                background-color:$gray-darker;
-                transform: rotate(90deg);
-                -ms-transform: rotate(90deg);
-                /* IE 9 */
-                -webkit-transform: rotate(90deg);
-                /* Safari and Chrome */
-                z-index:1052;
-            }            
-        }        
-    }
+        right: 0;
+        margin-top: -0.2em;
+        margin-right: 0.6em;
+        font-size: 2.5em;
+        color: black;
+    }        
     .modal-backdrop {
         opacity: 0;
         display: none;
