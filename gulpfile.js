@@ -119,6 +119,7 @@ gulp.task('clean', function() {
 
 gulp.task('index', function() {
   return gulp.src('index.html')
+  .pipe(replace('src="img\/', 'src="static\/img\/'))
   .pipe(replace('dist\/', ''))
   .pipe(gulp.dest('dist'))
 })
