@@ -2,66 +2,23 @@
 // Contact Section
 
 #contact {
+    padding-top: 4em;
+    padding-bottom: 4em;
     background-color: $gray-darker;
     background-position: center;
     color: $gray-light;
+    .contact-content {
+        text-align: center;
+        p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            font-size: 2em;
+            @include serif-font;
+        }
+    }
     .section-heading {
         color: white;
     }
-    .form-group {
-        margin-bottom: 25px;
-        input,
-        textarea {
-            padding: 20px;
-        }
-        input.form-control {
-            height: auto;
-        }
-        textarea.form-control {
-            height: 236px;
-        }
-    }
-    .form-control:focus {
-        border-color: $theme-primary;
-        box-shadow: none;
-    }
-    ::-webkit-input-placeholder {
-       @include heading-font;
-       font-weight: 700;
-       color: $gray-light;
-    }
-    :-moz-placeholder { /* Firefox 18- */
-       @include heading-font;
-       font-weight: 700;
-       color: $gray-light;
-    }
-    ::-moz-placeholder {  /* Firefox 19+ */
-       @include heading-font;
-       font-weight: 700;
-       color: $gray-light;
-    }
-    :-ms-input-placeholder {
-       @include heading-font;
-       font-weight: 700;
-       color: $gray-light;
-    }
-    .text-danger {
-        color: $theme-danger;
-    }
-    .contact-info {
-      margin-bottom: 5em;
-    }
-    .contact-info > h3 {
-      max-width: 18em;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
 }
 
-@media only screen and (max-width: 600px) {
-    #contact {
-        .contact-info > h3 {
-          font-size: 1.3em;
-        }
-    }
-}

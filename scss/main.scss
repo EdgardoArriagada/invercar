@@ -91,6 +91,14 @@ header {
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
+    
+    /* Do not delete vendor prefixes as autoprefixer module is not doing that job, tech deb */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+
     @include background-cover;
     text-align: center;
     color: white;
@@ -164,6 +172,7 @@ section {
 footer {
     padding: 25px 0;
     text-align: center;
+    background-color: $gray-darker;
     span.copyright {
         line-height: 40px;
         @include heading-font;
@@ -177,32 +186,6 @@ footer {
     }
 }
 
-// Social Buttons
-
-ul.social-buttons {
-    margin-bottom: 0;
-    li {
-        a {
-            display: block;
-            background-color: $gray-darker;
-            height: 40px;
-            width: 40px;
-            border-radius: 100%;
-            font-size: 20px;
-            line-height: 40px;
-            color: white;
-            outline: none;
-            -webkit-transition: all 0.3s;
-            -moz-transition: all 0.3s;
-            transition: all 0.3s;
-            &:hover,
-            &:focus,
-            &:active {
-                background-color: $theme-primary;
-            }
-        }
-    }
-}
 
 .btn:focus,
 .btn:active,
