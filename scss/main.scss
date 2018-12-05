@@ -91,6 +91,14 @@ header {
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
+    
+    /* Do not delete vendor prefixes as autoprefixer module is not doing that job, tech deb */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+
     @include background-cover;
     text-align: center;
     color: white;
