@@ -1,0 +1,133 @@
+
+// References
+
+// Portfolio Section
+
+#references {
+    .portfolio-item {
+        transform: scale(0.95);
+        background-color: white;
+        border-radius: 1em;
+        overflow: hidden;
+        padding: 0.8em;
+        box-shadow: $papper-like-shadow;
+        .portfolio-link {
+            display: block;
+            position: relative;
+            max-width: 400px;
+            margin: 0 auto;
+            .portfolio-hover {
+                background: fade-out(black, 0.4);
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: all ease 0.5s;
+                &:hover {
+                    opacity: 1;
+                }
+                .portfolio-hover-content {
+                    position: absolute;
+                    width: 100%;
+                    height: 20px;
+                    font-size: 20px;
+                    text-align: center;
+                    top: 50%;
+                    margin-top: -12px;
+                    color: white;
+                    i {
+                        margin-top: -12px;
+                    }
+                    h3,
+                    h4 {
+                        margin: 0;
+                    }
+                }                
+            }            
+        }
+        .portfolio-caption {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: white;
+            text-align: center;
+            padding: 25px;
+            h4 {
+                text-transform: none;
+                margin: 0;
+            }
+            p {
+                @include serif-font;
+                font-style: italic;
+                font-size: 16px;
+                margin: 0;
+            }
+        }
+    }
+    * {
+        z-index: 2;
+    }
+}
+
+@media(max-width:767px) {
+    #references {
+        .portfolio-item {
+            padding-top: 2em;
+        }
+    }
+}
+
+// Modal
+
+.portfolio-modal {
+    .modal-dialog{
+        height: 100%;
+        width: auto;
+    }
+
+    .modal-body {
+        background-color: white;
+        border-radius: 1em;
+        padding-bottom: 4em;
+    }
+    .modal-content {
+        background-color: transparent;
+        background-clip: border-box;
+        box-shadow: none;
+        border: none;
+        min-height: 100%;
+        padding: 100px 0;
+        text-align: center;
+        h2 {
+            margin-bottom: 15px;
+            font-size: 3em;
+        }
+        p {
+            margin-bottom: 30px;
+        }
+        p.item-intro {
+            margin: 20px 0 30px;
+            @include serif-font;
+            font-style: italic;
+            font-size: 16px;
+        }
+        ul.list-inline {
+            margin-bottom: 30px;
+            margin-top: 0;
+        }
+        img {
+            margin-bottom: 30px;
+        }
+    }
+    .close {
+        position: absolute;
+        right: 0;
+        margin-top: -0.2em;
+        margin-right: 0.6em;
+        font-size: 2.5em;
+        color: black;
+    }        
+    .modal-backdrop {
+        opacity: 0;
+        display: none;
+    }
+}

@@ -5,8 +5,7 @@
 @mixin button-variant($color, $background, $border) {
   color: $color;
   background-color: $background;
-  border-color: $border;
-
+  border: 0.1em solid $border;
   &:focus,
   &.focus {
     color: $color;
@@ -58,10 +57,7 @@
 // Background Cover Mixin
 
 @mixin background-cover {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
   background-size: cover;
-  -o-background-size: cover;
 }
 
 // Font Mixins
