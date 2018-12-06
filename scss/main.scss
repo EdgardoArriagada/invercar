@@ -89,18 +89,12 @@ h1, h2, h3, h4, h5, h6 {
 
 header {
     background-image: url('../img/header-bg.jpg');
-    background-repeat: no-repeat;
+    height: 100%; 
     background-attachment: scroll;
-    background-position: center center;
-    
-    /* Do not delete vendor prefixes as autoprefixer module is not doing that job, tech deb */
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    
 
-    @include background-cover;
     text-align: center;
     color: white;
     .intro-text {
