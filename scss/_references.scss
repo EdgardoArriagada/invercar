@@ -5,12 +5,12 @@
 
 #references {
     .portfolio-item {
-        transform: scale(0.95);
+        transform: scale(0.97);
         background-color: white;
         border-radius: 1em;
         overflow: hidden;
-        padding: 0.8em;
-        box-shadow: $papper-like-shadow;
+        padding: 0;
+        box-shadow: $md-whiteframe-1dp;
         .portfolio-link {
             display: block;
             position: relative;
@@ -65,14 +65,6 @@
     }
     * {
         z-index: 2;
-    }
-}
-
-@media(max-width:767px) {
-    #references {
-        .portfolio-item {
-            padding-top: 2em;
-        }
     }
 }
 

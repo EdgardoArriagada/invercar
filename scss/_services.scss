@@ -1,5 +1,14 @@
 // Services Section
 .service-heading {
-    margin: 15px 0;
+    margin: 0 0 15px 0;
     text-transform: none;
+}
+
+.service-image {
+    .img-responsive {
+        transform: scale(0.8);
+        box-shadow: $md-whiteframe-1dp;
+        margin: 0 auto;
+        border-radius: 7px;
+    }
 }

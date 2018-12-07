@@ -3,6 +3,7 @@
 .navbar-custom {
     background-color: $gray-darker;
     border-color: transparent;
+    box-shadow: $md-whiteframe-3dp;
     .navbar-brand {
         color: $theme-primary;
         @include script-font;

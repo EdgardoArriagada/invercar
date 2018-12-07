@@ -1,0 +1,83 @@
+header {
+    background-image: url('../img/header/header-lazy.jpg');
+    height: 100%; 
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    text-align: center;
+    color: white;
+    .intro-text {
+        padding-top: 100px;
+        padding-bottom: 50px;
+        .intro-lead-in {
+            @include serif-font;
+            font-style: italic;
+            font-size: 22px;
+            line-height: 22px;
+            margin-bottom: 25px;
+        }
+        .intro-heading {
+            @include heading-font;
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 50px;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+@media(min-width:768px) {
+    header {
+        .intro-text {
+            padding-top: 300px;
+            padding-bottom: 200px;
+            .intro-lead-in {
+                font-size: 40px;
+                line-height: 40px;
+                margin-bottom: 25px;
+            }
+            .intro-heading {
+                font-size: 75px;
+                line-height: 75px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    header {
+        background-image: url('../img/header/header-xs.jpg');
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+    header {
+        background-image: url('../img/header/header-sm.jpg');
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+    header {
+        background-image: url('../img/header/header-md.jpg');
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    header {
+        background-image: url('../img/header/header-lg.jpg');
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    header {
+        background-image: url('../img/header/header-xl.jpg');
+    }
+}
