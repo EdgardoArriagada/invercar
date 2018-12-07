@@ -6,6 +6,8 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
 
+    transition: background-image 0.7s ease;
+
     text-align: center;
     color: white;
     .intro-text {
@@ -49,35 +51,35 @@ header {
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
-    header {
+    header.loaded {
         background-image: url('../img/header/header-xs.jpg');
     }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) and (max-width: 767.98px) {
-    header {
+    header.loaded {
         background-image: url('../img/header/header-sm.jpg');
     }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991.98px) {
-    header {
+    header.loaded {
         background-image: url('../img/header/header-md.jpg');
     }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) and (max-width: 1199.98px) {
-    header {
+    header.loaded {
         background-image: url('../img/header/header-lg.jpg');
     }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-    header {
+    header.loaded {
         background-image: url('../img/header/header-xl.jpg');
     }
 }
