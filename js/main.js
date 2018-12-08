@@ -2,6 +2,19 @@
 
 (function($) {
   'use strict' // Start of use strict
+  var isProduction = false // changed by gulpFile
+  var developmentEnvironment = isProduction ? 'production' :  'development'
+  var imageFilePath = {
+    production: 'static/img/header/header-xl.jpg',
+    development: '/img/header/header-xl.jpg'
+  }  
+  imageFilePath = imageFilePath[developmentEnvironment] 
+  //Lazy Load Header 
+  var objImg = new Image()
+  objImg.src = imageFilePath
+  objImg.onload = function () {
+    $('header').css('background-image', 'url(' + imageFilePath + ')')
+  }
 
   // jQuery for page scrolling feature - requires jQuery Easing plugin
   $('a.page-scroll').bind('click', function (event) {
@@ -25,12 +38,6 @@
 
   //Update copyright
   $('.copyright .current-year').text((new Date()).getFullYear())
-  var imageFilePath = '/img/header/header-xl.jpg' 
-  //Lazy Load Header 
-  var objImg = new Image()
-  objImg.src = imageFilePath
-  objImg.onload = function () {
-    $('header').css('background-image', 'url(' + imageFilePath + ')')
-  }
+
 
 })(jQuery) // End of use strict
