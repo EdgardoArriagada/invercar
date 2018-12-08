@@ -26,7 +26,11 @@
   //Update copyright
   $('.copyright .current-year').text((new Date()).getFullYear())
 
-  //Lazy Load Images 
-  $('header').addClass('loaded')
+  //Lazy Load Header 
+  var objImg = new Image()
+  objImg.src = '../img/header/header-xl.jpg'
+  objImg.onload = function () {
+    $('header').css('background-image', 'url(../img/header/header-xl.jpg)')
+  }
 
 })(jQuery) // End of use strict
