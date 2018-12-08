@@ -25,12 +25,12 @@
 
   //Update copyright
   $('.copyright .current-year').text((new Date()).getFullYear())
-
+  var imageFilePath = '/img/header/header-xl.jpg' 
   //Lazy Load Header 
   var objImg = new Image()
-  objImg.src = '../img/header/header-xl.jpg'
+  objImg.src = imageFilePath
   objImg.onload = function () {
-    $('header').css('background-image', 'url(../img/header/header-xl.jpg)')
+    $('header').css('background-image', 'url(' + imageFilePath + ')')
   }
 
 })(jQuery) // End of use strict
