@@ -37,7 +37,8 @@
     var objImg = new Image()
     objImg.src = imageFilePath // preload image
     objImg.onload = function () {
-      $('header').css('background-image', 'url(' + imageFilePath + ')')
+      $('.background-lazy-load').css('background-image', 'url(' + imageFilePath + ')')
+      $('.background-lazy-load').css('opacity', '1')
     }
   }
 

@@ -1,16 +1,9 @@
 header {
-    background-image: url('../img/header/header-lazy.jpg');
-    height: 100%; 
-    background-attachment: scroll;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    transition: background-image 0.7s ease;
-
+    position: relative;
     text-align: center;
     color: white;
     .intro-text {
+        z-index: 1;
         padding-top: 100px;
         padding-bottom: 50px;
         .intro-lead-in {
@@ -28,6 +21,26 @@ header {
             margin-bottom: 25px;
         }
     }
+}
+.background-placeholder {
+    z-index: -2;
+    background-image: url('../img/header/header-lazy.jpg');
+}
+.background-lazy-load {
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.7s linear;
+}
+
+.background-image {
+    position: absolute;
+    height: 100%; 
+    width: 100%;
+    left: 0;
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 @media(min-width:768px) {
