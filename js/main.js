@@ -64,8 +64,34 @@
     offset: 51
   })
 
+  var navState = 'closed'
+  function changeNavState () {
+    navState = navState === 'closed' 
+      ? 'open'
+      : 'closed'
+  }
+  function changeNavBackgroundLayer () {
+    var layerStyleObj = {
+      open: { opacity: 1, 'pointer-events': 'auto' },
+      closed: { opacity: 0, 'pointer-events': 'none' }
+    }
+    $('.nav-background-layer').css('opacity', layerStyleObj[navState].opacity)
+    $('.nav-background-layer').css('pointer-events', layerStyleObj[navState]['pointer-events'])
+  }
+  
+  // navbar-toggle listener
+  $('.navbar-toggle').click(function () {
+    changeNavState()
+    changeNavBackgroundLayer()
+  })
+
   // Closes the Responsive Menu on Menu Item Click
   $('.navbar-collapse ul li a').click(function () {
+    $('.navbar-toggle:visible').click()
+  })
+
+  // Closes the Responsive Menu on nav-background-layer Click
+  $('.nav-background-layer').click(function () {
     $('.navbar-toggle:visible').click()
   })
 
