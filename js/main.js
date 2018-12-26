@@ -95,6 +95,15 @@
     $('.navbar-toggle:visible').click()
   })
 
+  // Disable button temporary on user click
+  $('.btn').click(function () {
+    $(this).addClass('disabled')
+    var self = this
+    setTimeout(function() {
+      $(self).removeClass('disabled')
+    }, 1500)
+  })
+
   //Update copyright
   $('.copyright .current-year').text((new Date()).getFullYear())
 
