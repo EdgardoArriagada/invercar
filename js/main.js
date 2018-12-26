@@ -95,26 +95,13 @@
     $('.navbar-toggle:visible').click()
   })
 
-  // Change button icon temporary on user click
-  var buttonLoadingMessage = 'cargando...'
-
-  var previousEmailText = $('.email-btn').html()
-  $('.email-btn').click(function () {
-    $('.email-btn').html(buttonLoadingMessage)
-    $('.email-btn').addClass('disabled')
+  // Disable button temporary on user click
+  $('.btn').click(function () {
+    $(this).addClass('disabled')
+    var self = this
     setTimeout(function() {
-      $('.email-btn').removeClass('disabled')
-      $('.email-btn').html(previousEmailText)
-    }, 5000)
-  })
-  var previousPhoneText = $('.phone-btn').html()
-  $('.phone-btn').click(function () {
-    $('.phone-btn').html(buttonLoadingMessage)
-    $('.phone-btn').addClass('disabled')
-    setTimeout(function() {
-      $('.phone-btn').removeClass('disabled')
-      $('.phone-btn').html(previousPhoneText)
-    }, 5000)
+      $(self).removeClass('disabled')
+    }, 1500)
   })
 
   //Update copyright
