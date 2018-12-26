@@ -95,6 +95,22 @@
     $('.navbar-toggle:visible').click()
   })
 
+  // Change button icon temporary on user click
+  var previousEmailText = $('.email-btn').html()
+  $('.email-btn').click(function () {
+    $('.email-btn').html('...')
+    setTimeout(function() {
+      $('.email-btn').html(previousEmailText)
+    }, 5000)
+  })
+  var previousPhoneText = $('.phone-btn').html()
+  $('.phone-btn').click(function () {
+    $('.phone-btn').html('...')
+    setTimeout(function() {
+      $('.phone-btn').html(previousPhoneText)
+    }, 5000)
+  })
+
   //Update copyright
   $('.copyright .current-year').text((new Date()).getFullYear())
 
