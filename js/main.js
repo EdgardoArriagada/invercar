@@ -96,17 +96,23 @@
   })
 
   // Change button icon temporary on user click
+  var buttonLoadingMessage = 'cargando...'
+
   var previousEmailText = $('.email-btn').html()
   $('.email-btn').click(function () {
-    $('.email-btn').html('...')
+    $('.email-btn').html(buttonLoadingMessage)
+    $('.email-btn').addClass('disabled')
     setTimeout(function() {
+      $('.email-btn').removeClass('disabled')
       $('.email-btn').html(previousEmailText)
     }, 5000)
   })
   var previousPhoneText = $('.phone-btn').html()
   $('.phone-btn').click(function () {
-    $('.phone-btn').html('...')
+    $('.phone-btn').html(buttonLoadingMessage)
+    $('.phone-btn').addClass('disabled')
     setTimeout(function() {
+      $('.phone-btn').removeClass('disabled')
       $('.phone-btn').html(previousPhoneText)
     }, 5000)
   })
