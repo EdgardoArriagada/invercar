@@ -62,4 +62,17 @@
           background-color: $gray-darker;
         }
     }
+    .nav-background-layer {
+        z-index: 0;
+        background-color: rgba(0, 0, 0, 0.48);
+        opacity: 0;
+        pointer-events: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 125%;
+        width: 100%;
+        transition: opacity 300ms ease-in;
+      
+    }
 }
